@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="css/stylo.css">
+    <title>:: Sistema de Estrategias Didácticas de Aprendizaje Colaborativo ::</title>
+    <script>
+      function validar() {
+        var u = document.forms["formulario"]["usuario"].value;
+        var c = document.forms["formulario"]["contra"].value;
+        if (u == "admin" && c == "admin") {
+          return true;
+        } else {
+          alert("Acceso denegado");
+          return false;
+        }
+      } 
+    </script>
+  </head>
+  <body class="container" role="document">
+    <header>
+      <div id="encabezado"></div>
+    </header>
+    <main class="contenido">
+    <ul class="nav nav-tabs nav-justified pilas">
+      <li class="active"><a id="activa" href="#">Iniciar sesión</a></li>
+    </ul>
+      <form class="form-horizontal login" enctype="multipart/form-data" action="principal.html" method="post" name="formulario" onsubmit="return validar()">
+        <h2>COMMIT NUMBER TWO</h2>  
+        <!-- Componentes para el RFC -->
+          <div class="form-group form-login">
+            <label class="control-label col-sm-3" for="rfc">Usuario</label>
+            <div class="col-sm-5">
+              <input class="form-control" type="text" name="usuario" id="usuario" size="50" placeholder="Introduzca su homoclave" required autofocus/>
+            </div>
+          </div>
+          <!-- Componentes para la contraseña -->
+          <div class="form-group form-login">
+            <label class="control-label col-sm-3" for="contra">Contraseña</label>
+            <div class="col-sm-5">
+              <input class="form-control" type="password" name="contra" id="contra" size="50" placeholder="Introduzca su contraseña" required/>
+            </div>
+          </div>
+          <!-- Sección de botones -->
+          <div class="form-group form-login">
+            <div class="col-sm-offset-3 col-sm-5">
+              <button class="btn btn-primary btn-block" type="submit">Ingresar</button>
+            </div>
+          </div>
+      </form>
+    </main>
+     <footer>
+      <div id="data">
+      </div>
+      <div id="info">División Académica de Informática y Sistemas</div>
+      <div id="actualizacion">Última actualización: 07/jun/2017</div>
+    </footer>
+  </body>
+</html>
